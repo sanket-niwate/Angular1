@@ -1,0 +1,50 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  background-color: #ace2e1;
+}
+
+.card {
+  position: relative; /* Ensures proper positioning of the button */
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.card .button {
+  display: none; /* Hide the button by default */
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #008DDA, #41C9E2);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover .button {
+  display: block; /* Show the button when card is hovered */
+}
+
+.card .button:hover {
+  background: #80ced6;
+}
+
+h2,
+h3,
+p {
+  margin: 0;
+}
